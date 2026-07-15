@@ -14,7 +14,7 @@ test('AutoSuggestDropdown', async ({page}, testInfo)=>{
     console.log('=================================================================================')
     for(let  i =0; i< await cityOptions.count(); i++){
         const city = await cityOptions.nth(i).textContent()
-        if(city?.trim() === 'une'){
+        if(city?.trim() === 'Pune'){
             await cityOptions.nth(i).click();
             await page.screenshot({path: 'Pune.png'})
             await page.waitForTimeout(7000);
