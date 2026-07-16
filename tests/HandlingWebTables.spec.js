@@ -33,12 +33,12 @@ test('HandlingWebTables', async ({page})=>{
     await selectProduct(webTableRows, page, 'Tablet')
 
     // // pring all data from table in console
-    for(let i=0 ; i< await webTableRows.count(); i++){
-        const row = await webTableRows.nth(i);
-        const td =  row.locator('td');
-        for(let j=0; j<await td.count()-1; j++){
-            console.log(await td.nth(j).textContent())
-        }
+    // for(let i=0 ; i< await webTableRows.count(); i++){
+    //     const row = await webTableRows.nth(i);
+    //     const td =  row.locator('td');
+    //     for(let j=0; j<await td.count()-1; j++){
+    //         console.log(await td.nth(j).textContent())
+    //     }
 
     // }
 
