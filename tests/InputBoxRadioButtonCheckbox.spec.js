@@ -21,13 +21,14 @@ test("handling InputBoxRadioButtonCheckbox", async ({page})=>{
 
     await page.locator('//a/span[text()="Check Box"]').click();
     const checkbox = await page.getByRole('checkbox');
-    await page.waitForTimeout(3000);
+    await page.waitForTimeout(2000);
     await checkbox.check();
-    await page.waitForTimeout(9000);
+    await page.waitForTimeout(2000);
 
     await checkbox.isChecked();
-
+    console.log("============================================================================")
     console.log(await expect(checkbox).toBeChecked());
+    console.log("============================================================================")
     await expect(checkbox.isChecked).toBeTruthy();
 
     
